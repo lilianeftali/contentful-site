@@ -38,7 +38,7 @@ async function fetchGraphQL(query: string, preview = false): Promise<any> {
         Authorization: `Bearer ${
           preview
             ? process.env.CONTENTFUL_PREVIEW_ACCESS_TOKEN
-            : process.env.CONTENTFUL_ACCESS_TOKEN
+            : process.env.CONTENTFUL_DELIVERY_ACCESS_TOKEN
         }`,
       },
       body: JSON.stringify({ query }),
